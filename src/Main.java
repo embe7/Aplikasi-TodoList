@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        testShowTodoList();
     }
 
     /**
@@ -12,7 +13,7 @@ public class Main {
 
     public static void showTodoList(){
         //membuat nomor
-        for (var i = 0; i < model.length){
+        for (var i = 0; i < model.length; i++){
             var todo = model[i];
             var numbers = i + 1;
 
@@ -20,8 +21,13 @@ public class Main {
                 System.out.println(numbers + ". " + todo);
             }
         }
+    }
+    //Test Menampilkan todo list
+    public static void testShowTodoList(){
+        model[0] = "Membaca Buku";
+        model[1] = "Belajar java";
 
-
+        showTodoList();
     }
 
     /**
