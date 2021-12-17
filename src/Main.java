@@ -1,6 +1,6 @@
 public class Main {
 
-    String[] model = new String[10];
+    public static String[] model = new String[10];
 
     public static void main(String[] args) {
 
@@ -11,6 +11,16 @@ public class Main {
      */
 
     public static void showTodoList(){
+        //membuat nomor
+        for (var i = 0; i < model.length){
+            var todo = model[i];
+            var numbers = i + 1;
+
+            if (todo != null){
+                System.out.println(numbers + ". " + todo);
+            }
+        }
+
 
     }
 
