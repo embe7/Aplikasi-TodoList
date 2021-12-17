@@ -5,4 +5,28 @@ public class Main {
     public static void main(String[] args) {
 
     }
+
+    /**
+     * Menampilkan todo list
+     */
+
+    public static void showTodoList(){
+
+    }
+
+    /**
+     * Menambah todo ke list
+     */
+
+    public static void addTodoList(){
+
+    }
+
+    /**
+     * Menghapus todo dari list
+     */
+
+    public static void removeTodoList(){
+
+    }
 }
