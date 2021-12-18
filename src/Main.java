@@ -4,7 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        testShowTodoList();
+        
+
     }
 
     /**
@@ -15,28 +16,63 @@ public class Main {
         //membuat nomor
         for (var i = 0; i < model.length; i++){
             var todo = model[i];
-            var numbers = i + 1;
+            var number = i + 1;
 
             if (todo != null){
-                System.out.println(numbers + ". " + todo);
+                System.out.println(number + ". " + todo);
             }
         }
     }
-    //Test Menampilkan todo list
-    public static void testShowTodoList(){
-        model[0] = "Membaca Buku";
-        model[1] = "Belajar java";
-
-        showTodoList();
-    }
+    //test showTodoList
+//    public static void testShowTodoList(){
+//        model[0] = "Belajar Java";
+//        model[1] = "Latihan Java";
+//
+//        showTodoList();
+//    }
 
     /**
      * Menambah todo ke list
      */
 
-    public static void addTodoList(){
+    public static void addTodoList(String todo){
+        //cek model penuh
+        var isFull = true;
+        for (var i = 0; i < model.length; i++){
+            if (model[i] == null){
+                isFull = false;
+                break;
+            }
+        }
+
+        //jika penuh resize ukuran array 2x lipat
+        if (isFull){
+            var temp = model;
+            model = new String[model.length * 2];
+
+            for (int i = 0; i < temp.length; i++){
+                model[i] = temp[i];
+            }
+        }
+
+        //tambahkan ke posisi yang data array nya NULL
+        for (var i = 0; i < model.length;i++){
+            if (model[i] == null){
+                model[i] = todo;
+                break;
+            }
+        }
+
 
     }
+    //test addTodoList
+//    public static void testAddTodoList(){
+//        for (int i = 0; i < 25; i++){
+//            addTodoList("todo ke " + i);
+//        }
+//
+//        showTodoList();
+//    }
 
     /**
      * Menghapus todo dari list
