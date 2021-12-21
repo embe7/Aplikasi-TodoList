@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-    testAddTodoList();
+    
 
     }
 
@@ -66,13 +66,13 @@ public class Main {
         }
     }
     //test addTodoList
-    public static void testAddTodoList(){
-        for (int i = 0; i < 25; i++){
-            addTodoList("todo ke " + i);
-        }
-
-        showTodoList();
-    }
+//    public static void testAddTodoList(){
+//        for (int i = 0; i < 25; i++){
+//            addTodoList("todo ke " + i);
+//        }
+//
+//        showTodoList();
+//    }
 
     /**
      * Menghapus todo dari list
@@ -84,10 +84,28 @@ public class Main {
         } else if (model[number - 1] == null) {
             return false;
         } else {
-            model[number - 1] = null;
+            for (var i = (number - 1); i < model.length; i++){
+                if (i ==(model.length - 1)){
+                    model[i] = null;
+                }else {
+                    model[i] = model[i + 1];
+                }
+            }
             return true;
         }
     }
+    //Method Test Remove TodoList
+//    public static void testRemoveTodoList(){
+//        addTodoList("satu");
+//        addTodoList("dua");
+//        addTodoList("Tiga");
+//        addTodoList("Empat");
+//
+//        var result = removeTodoList(2);
+//
+//        System.out.println(result);
+//        showTodoList();
+//    }
 
     /**
      * Menampilkan view todo list
