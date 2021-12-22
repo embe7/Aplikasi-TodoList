@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-    testInput();
+
 
     }
 
@@ -118,10 +118,10 @@ public class Main {
         return data;
     }
     //Method untuk mengetes input
-    public static void testInput(){
-        var name = input("Name");
-        System.out.println("Hi " + name);
-    }
+//    public static void testInput(){
+//        var name = input("Name");
+//        System.out.println("Hi " + name);
+//    }
 
 
     /**
@@ -129,7 +129,24 @@ public class Main {
      */
 
     public static void viewShowTodolist(){
+        while (true){
+            showTodoList();
+            System.out.println("Menu :");
+            System.out.println("1. Tambah");
+            System.out.println("2. Hapus");
+            System.out.println("x. Keluar");
 
+            var input = input("Pilih");
+            if (input.equals("1")){
+                viewAddTodoList();
+            }else if (input.equals("2")){
+                viewRemoveTodoList();
+            }else if(input.equals("x")) {
+                break;
+            }else {
+                System.out.println("Pilihan Tidak Dimengerti");
+            }
+        }
     }
 
     /**
