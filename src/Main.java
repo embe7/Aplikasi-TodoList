@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        testViewShowTodoList();
 
     }
 
@@ -15,6 +15,7 @@ public class Main {
      */
 
     public static void showTodoList(){
+        System.out.println("TODOLIST");
         //membuat nomor
         for (var i = 0; i < model.length; i++){
             var todo = model[i];
@@ -147,6 +148,15 @@ public class Main {
                 System.out.println("Pilihan Tidak Dimengerti");
             }
         }
+    }
+    //Method untuk test viewShowTodoList
+    public static void testViewShowTodoList(){
+        addTodoList("satu");
+        addTodoList("dua");
+        addTodoList("tiga");
+        addTodoList("empat");
+        addTodoList("lima");
+        viewShowTodolist();
     }
 
     /**
