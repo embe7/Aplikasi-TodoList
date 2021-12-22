@@ -1,12 +1,12 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static String[] model = new String[10];
 
-    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
-
     public static void main(String[] args) {
 
-    
+    testInput();
 
     }
 
@@ -106,6 +106,23 @@ public class Main {
 //        System.out.println(result);
 //        showTodoList();
 //    }
+
+    /**
+     * Input Data
+     */
+    public static String input(String info){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(info + " : ");
+        String data = scanner.nextLine();
+        return data;
+    }
+    //Method untuk mengetes input
+    public static void testInput(){
+        var name = input("Name");
+        System.out.println("Hi " + name);
+    }
+
 
     /**
      * Menampilkan view todo list
