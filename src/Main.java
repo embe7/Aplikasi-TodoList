@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        
+        viewShowTodolist();
 
     }
 
@@ -198,4 +198,15 @@ public class Main {
             }
         }
     }
+
+    //Method untuk tes viewRemoveTodoList
+//    public static void testViewRemoveTodoList(){
+//        addTodoList("satu");
+//        addTodoList("dua");
+//        addTodoList("tiga");
+//
+//        showTodoList();
+//        viewRemoveTodoList();
+//        showTodoList();
+//    }
 }
